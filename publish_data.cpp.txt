@@ -1,0 +1,8 @@
+void sendDataTask(void *pvParameters) {
+    int data;
+    while(1) {
+        if (xQueueReceive(sensorQueue, &data, portMAX_DELAY)) {
+            publishToMQTT(data);  // Function to send data via ESP8266
+        }
+    }
+}

@@ -1,0 +1,7 @@
+void readSensorTask(void *pvParameters) {
+    while(1) {
+        int sensorData = readSensor();
+        xQueueSend(sensorQueue, &sensorData, portMAX_DELAY);
+        vTaskDelay(pdMS_TO_TICKS(500));  // 500 ms delay
+    }
+}
