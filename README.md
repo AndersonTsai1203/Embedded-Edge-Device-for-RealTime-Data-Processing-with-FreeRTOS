@@ -1,0 +1,1 @@
+# Embedded-Edge-Device-for-RealTime-Data-Processing-with-FreeRTOS
